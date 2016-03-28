@@ -24,6 +24,11 @@ namespace TestService
             InitializeComponent();
         }
 
+        public void Start()
+        {
+            this.OnStart(null);
+        }
+
         protected override void OnStart(string[] args)
         {
             timer = new Timer(p =>

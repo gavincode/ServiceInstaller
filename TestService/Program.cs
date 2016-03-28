@@ -14,6 +14,12 @@ namespace TestService
         /// </summary>
         static void Main()
         {
+            if (Environment.UserInteractive)
+            {
+                new Service1().Start();
+                return;
+            }
+
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
             { 
